@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "26191f68-a509-40b9-8ce2-3366f0011f11",
+		"name": "Vets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34966119"
+	},
+	"item": [
+		{
+			"name": "List Vets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{test}}vets",
+					"host": [
+						"{{test}}vets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Details vet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{test}}vet/1",
+					"host": [
+						"{{test}}vet"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create vet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Vet2\",\n    \"phone\": \"10000222\",\n    \"address\": \"calle 23\",\n    \"email\": \"vet2@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{test}}vet",
+					"host": [
+						"{{test}}vet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update vet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"Vet1\",\n    \"phone\": \"1234567777\",\n    \"address\": \"calle 34\",\n    \"email\": \"vet1@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{test}}vet/1",
+					"host": [
+						"{{test}}vet"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

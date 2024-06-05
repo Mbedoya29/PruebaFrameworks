@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "32f8bd55-7dbb-4f03-bdf6-02623bc11c5d",
+		"name": "Owners",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34966119"
+	},
+	"item": [
+		{
+			"name": "Owners list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{test}}owners",
+					"host": [
+						"{{test}}owners"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Details owner",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{test}}owner/1",
+					"host": [
+						"{{test}}owner"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Owner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"names\": \"mariana\",\n    \"lastNames\": \"tres\",\n    \"email\": \"marianabedoyac01@gmail.com\",\n    \"address\": \"calle 90\",\n    \"phone\": \"567890\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{test}}owner",
+					"host": [
+						"{{test}}owner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update owner",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 3,\n    \"names\": \"prop3\",\n    \"lastNames\": \"tres\",\n    \"email\": \"prop3@gmail.com\",\n    \"address\": \"calle 90\",\n    \"phone\": \"567890\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{test}}owner/3",
+					"host": [
+						"{{test}}owner"
+					],
+					"path": [
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

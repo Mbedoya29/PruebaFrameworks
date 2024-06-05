@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "3323dd6c-1f59-458f-a01f-a7ccf3ff0d5f",
+		"name": "Quotes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34966119"
+	},
+	"item": [
+		{
+			"name": "List Quotes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{test}}quotes",
+					"host": [
+						"{{test}}quotes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Details quote",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{test}}quote/1",
+					"host": [
+						"{{test}}quote"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Quote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\": \"2025-06-28T04:30:00\",\n    \"petId\": 2,\n    \"vetId\": 2,\n    \"description\": \"cita3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{test}}quote",
+					"host": [
+						"{{test}}quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Quote",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"date\": \"2024-06-15T05:35:00\",\n    \"petId\": 1,\n    \"vetId\": 1,\n    \"description\": \"cita1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{test}}quote/1",
+					"host": [
+						"{{test}}quote"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{test}}2024-06-15T05:35:00/date",
+					"host": [
+						"{{test}}2024-06-15T05:35"
+					],
+					"port": "00",
+					"path": [
+						"date"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote Vet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{test}}quotes/2/vets",
+					"host": [
+						"{{test}}quotes"
+					],
+					"path": [
+						"2",
+						"vets"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "5ff92b37-67a0-49c4-b7e6-897bd37dc38a",
+		"name": "Pets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34966119"
+	},
+	"item": [
+		{
+			"name": "List Pets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{test}}pets",
+					"host": [
+						"{{test}}pets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Details pet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{test}}pet/1",
+					"host": [
+						"{{test}}pet"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create pet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Toby\",\n    \"specie\": \"Dog\",\n    \"race\": \"Bulldog\",\n    \"dateBirth\": \"2015-05-15T03:00:00\",\n    \"ownerId\": 1,\n    \"photo\": \"foto1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{test}}pet",
+					"host": [
+						"{{test}}pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update pet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"Tito\",\n    \"specie\": \"Dog\",\n    \"race\": \"Bulldog\",\n    \"dateBirth\": \"2015-05-15T03:00:00\",\n    \"ownerId\": 4,\n    \"photo\": \"foto1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{test}}pet/1",
+					"host": [
+						"{{test}}pet"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Owners",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{test}}pets/4/owner",
+					"host": [
+						"{{test}}pets"
+					],
+					"path": [
+						"4",
+						"owner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Birthday pet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{test}}pets/2015-05-15T03:00:00/birthday",
+					"host": [
+						"{{test}}pets"
+					],
+					"path": [
+						"2015-05-15T03:00:00",
+						"birthday"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
